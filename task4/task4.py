@@ -6,5 +6,6 @@ if __name__ == "__main__":
     with open(nums_path, "r") as file:
         nums = [int(line.strip()) for line in file]
 
+    nums.sort()
     median = nums[len(nums) // 2]
     print(sum(abs(num - median) for num in nums))
